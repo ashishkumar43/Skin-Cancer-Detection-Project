@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Metrics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">SkinCheck</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#predict">Predict</a></li>
+            <li><a href="metrics.html">Metrics</a></li>
+        </ul>
+    </nav>
+
+    <!-- Metrics Section -->
+    <section class="metrics-section">
+        <h1>Model Performance</h1>
+        <p>Detailed information about the accuracy and performance of our AI model, including sensitivity, specificity, and more.</p>
+        
+        <div class="test-accuracy">
+          <p> <span>Test Accuracy:</span><strong>0.4362</strong></p>
+        </div>
+
+        <div class="label-and-matrix">
+          <div>
+            <h2>Label Value Counts</h2>
+            <img src="/public/images/labelCpunt.jpeg" alt="Label Value Counts" style="width: 100%;">
+          </div>
+  
+          <div>
+            <h2>Confusion Matrix</h2>
+            <img src="/public/images/confusionMatrix.jpeg" alt="Confusion Matrix" style="width: 100%;">
+          </div>          
+        </div>
+
+        <h2>Classification Report</h2>
+        <table class="classification-report">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>F1-Score</th>
+                    <th>Support</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Actinic Keratosis</td>
+                    <td>0.37</td>
+                    <td>0.42</td>
+                    <td>0.40</td>
+                    <td>1997</td>
+                </tr>
+                <tr>
+                    <td>Basal Cell Carcinoma</td>
+                    <td>0.37</td>
+                    <td>0.30</td>
+                    <td>0.33</td>
+                    <td>2037</td>
+                </tr>
+                <tr>
+                    <td>Benign Keratosis</td>
+                    <td>0.26</td>
+                    <td>0.40</td>
+                    <td>0.32</td>
+                    <td>2043</td>
+                </tr>
+                <tr>
+                    <td>Dermatofibroma</td>
+                    <td>0.45</td>
+                    <td>0.03</td>
+                    <td>0.06</td>
+                    <td>1997</td>
+                </tr>
+                <tr>
+                    <td>Melanoma</td>
+                    <td>0.36</td>
+                    <td>0.80</td>
+                    <td>0.50</td>
+                    <td>1979</td>
+                </tr>
+                <tr>
+                    <td>Melanocytic Nevi</td>
+                    <td>0.82</td>
+                    <td>0.49</td>
+                    <td>0.62</td>
+                    <td>2041</td>
+                </tr>
+                <tr>
+                    <td>Vascular Lesion</td>
+                    <td>0.94</td>
+                    <td>0.61</td>
+                    <td>0.74</td>
+                    <td>1987</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Card for Overall Metrics -->
+        <div class="card">
+          <h3>Overall Metrics</h3>
+          <ul class="overall-metrics">
+              <li>
+                  <span class="metric-icon">🎯</span>
+                  <span>Overall Accuracy: <strong>0.4362</strong></span>
+              </li>
+              <li>
+                  <span class="metric-icon">📏</span>
+                  <span>Precision (Weighted): <strong>0.5099</strong></span>
+              </li>
+              <li>
+                  <span class="metric-icon">📊</span>
+                  <span>Recall (Weighted): <strong>0.4362</strong></span>
+              </li>
+              <li>
+                  <span class="metric-icon">🔄</span>
+                  <span>F1-Score (Weighted): <strong>0.4226</strong></span>
+              </li>
+          </ul>
+      </div>
+
+        <div class="accuracy-loss-graph">
+          <h2>Accuracy and Loss Graph</h2>
+          <img src="/public/images/accLossGraph.jpeg" alt="Accuracy / Loss Graph" style="width: 60%;">
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
